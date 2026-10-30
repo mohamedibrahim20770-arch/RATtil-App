@@ -8,6 +8,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    # تحديد المجلد الفرعي الذي يحتوي على ملفات المشروع
+    defaults:
+      run:
+        working-directory: ./RATtil_Android_Experimental_V1
 
     steps:
       - name: Checkout repository
@@ -36,4 +41,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: RATtil-Release-APK
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: RATtil_Android_Experimental_V1/build/app/outputs/flutter-apk/app-release.apk
